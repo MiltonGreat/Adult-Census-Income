@@ -53,12 +53,14 @@ The dataset contains both numerical and categorical features, making it a great 
 
 ### Future Improvements
 
-    Hyperparameter Tuning:
-        Use GridSearchCV or RandomizedSearchCV for optimizing model performance.
-    Feature Engineering:
-        Explore additional features like interaction terms or polynomial transformations.
-    Addressing Class Imbalance:
-        Use techniques like SMOTE (Synthetic Minority Oversampling) to balance the dataset.
+Hyperparameter Tuning:
+- Use GridSearchCV or RandomizedSearchCV for optimizing model performance.
+
+Feature Engineering:
+- Explore additional features like interaction terms or polynomial transformations.
+
+Addressing Class Imbalance:
+- Use techniques like SMOTE (Synthetic Minority Oversampling) to balance the dataset.
 
 ### Source
 
