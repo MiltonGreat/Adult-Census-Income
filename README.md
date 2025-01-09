@@ -6,6 +6,20 @@ This project uses the **Adult Census Income** dataset extracted from the 1994 Ce
 
 The dataset contains both numerical and categorical features, making it a great candidate for showcasing preprocessing techniques in machine learning.
 
+### Quality Issues:
+
+- Missing or inconsistent values (e.g., ? in workclass or occupation).
+- Imbalanced target variable (<=50K dominates).
+
+Cleaning:
+- Replace ? with NaN and impute or drop rows/columns as needed.
+- Normalize numerical features for models like Logistic Regression.
+- Address class imbalance using SMOTE or cost-sensitive learning.
+
+Known Limitations:
+- Imbalanced target variable.
+- Data is from 1994, so it may not reflect current demographic or economic trends.
+
 ### Dataset
 
 - **File Name**: `adult.csv`
