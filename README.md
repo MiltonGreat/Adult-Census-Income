@@ -2,9 +2,9 @@
 
 ### Overview
 
-This project uses the **Adult Census Income** dataset extracted from the 1994 Census Bureau database to predict income levels (`<=50K` or `>50K`). It demonstrates the application of **one-hot encoding** and **normalization** for preprocessing data and evaluates models such as **Logistic Regression** and **Random Forest Classifier** for classification tasks. 
+This project focuses on building a machine learning model to predict whether an individual earns more or less than $50,000 per year. 
 
-The dataset contains both numerical and categorical features, making it a great candidate for showcasing preprocessing techniques in machine learning.
+This project uses the **Adult Census Income** dataset extracted from the 1994 Census Bureau database to predict income levels (`<=50K` or `>50K`). It demonstrates the application of **one-hot encoding** and **normalization** for preprocessing data and evaluates models such as **Logistic Regression** and **Random Forest Classifier** for classification tasks. 
 
 ### Quality Issues:
 
@@ -22,14 +22,13 @@ Known Limitations:
 
 ### Dataset
 
-- **File Name**: `adult.csv`
-- **Source**: UCI Machine Learning Repository
-- **Dataset Features**:
-  - **Categorical Features**: `workclass`, `education`, `marital.status`, `occupation`, `relationship`, `race`, `sex`, `native.country`, `income`
-  - **Numerical Features**: `age`, `fnlwgt`, `education.num`, `capital.gain`, `capital.loss`, `hours.per.week`
+The dataset includes 32,561 records and 15 attributes. Key attributes include:
+- **Numerical Features**: `age`, `fnlwgt`, `education.num`, `capital.gain`, `capital.loss`, `hours.per.week`.
+- **Categorical Features**: `workclass`, `education`, `marital.status`, `occupation`, `relationship`, `race`, `sex`, `native.country`, `income`.
 
-#### Target Variable
-- **Income**: Binary classification into `<=50K` and `>50K`.
+#### Class Distribution
+- **<=50K**: Majority class (approximately 75% of records).
+- **>50K**: Minority class (approximately 25% of records).
 
 ### Project Workflow
 
@@ -58,23 +57,15 @@ Known Limitations:
 - **Confusion Matrices**:
   - Visualized using heatmaps for both models to analyze predictions.
 
-### Key Results
-
-| Model                  | Accuracy | Precision (<=50K) | Recall (<=50K) | F1-Score (<=50K) | Precision (>50K) | Recall (>50K) | F1-Score (>50K) |
-|------------------------|----------|-------------------|----------------|------------------|------------------|---------------|-----------------|
-| Logistic Regression    | 84.20%   | 87%               | 92%            | 90%              | 72%              | 60%           | 65%             |
-| Random Forest Classifier | 84.24%   | 88%               | 92%            | 90%              | 72%              | 61%           | 66%           |
+### Key Insights
+- Random Forest outperformed Logistic Regression in accuracy, recall, and F1-score.
+- SMOTE effectively balanced the dataset, improving model performance on the minority class (`>50K`).
+- The `hours.per.week`, `education.num`, and `occupation` features are critical predictors.
 
 ### Future Improvements
-
-Hyperparameter Tuning:
-- Use GridSearchCV or RandomizedSearchCV for optimizing model performance.
-
-Feature Engineering:
-- Explore additional features like interaction terms or polynomial transformations.
-
-Addressing Class Imbalance:
-- Use techniques like SMOTE (Synthetic Minority Oversampling) to balance the dataset.
+- Perform hyperparameter tuning for Logistic Regression and Random Forest.
+- Experiment with ensemble models like Gradient Boosting or LightGBM.
+- Analyze feature importance using SHAP or LIME for better interpretability.
 
 ### Source
 
