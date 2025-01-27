@@ -1,4 +1,4 @@
-# Adult Census Income Classification Project
+# Adult Census Income Classification
 
 ### Overview
 
