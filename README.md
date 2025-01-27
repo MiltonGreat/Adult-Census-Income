@@ -70,4 +70,4 @@ The dataset includes 32,561 records and 15 attributes. Key attributes include:
 
 ### Source
 
-https://www.kaggle.com/datasets/uciml/adult-census-income
+Dataset: [Adult Census Income Dataset on Kaggle](https://www.kaggle.com/datasets/uciml/adult-census-income)
