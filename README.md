@@ -6,8 +6,9 @@ This project focuses on building a machine learning model to predict whether an 
 
 This project uses the **Adult Census Income** dataset extracted from the 1994 Census Bureau database to predict income levels (`<=50K` or `>50K`). It demonstrates the application of **one-hot encoding** and **normalization** for preprocessing data and evaluates models such as **Logistic Regression** and **Random Forest Classifier** for classification tasks. 
 
-### Quality Issues:
+### Quality Issues
 
+Data Problems:
 - Missing or inconsistent values (e.g., ? in workclass or occupation).
 - Imbalanced target variable (<=50K dominates).
 
