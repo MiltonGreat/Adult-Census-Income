@@ -52,18 +52,16 @@ The dataset includes 32,561 records and 15 attributes. Key attributes include:
   - Used 100 decision trees for the ensemble.
   - Achieved an accuracy of **84.24%**.
 
-#### 4. Results
-- **Classification Reports**:
-  - Show precision, recall, and F1-scores for each income class.
-- **Confusion Matrices**:
-  - Visualized using heatmaps for both models to analyze predictions.
-
 ### Key Insights
-- Random Forest outperformed Logistic Regression in accuracy, recall, and F1-score.
-- SMOTE effectively balanced the dataset, improving model performance on the minority class (`>50K`).
-- The `hours.per.week`, `education.num`, and `occupation` features are critical predictors.
+
+The Random Forest classifier achieved an overall accuracy of 84%. However, the model exhibited lower performance for the minority class (>50K), with precision and recall of 67% and 70%, respectively, highlighting the challenge of class imbalance.
+
+Fairness analysis revealed a significant discrepancy in model performance across genders, with higher accuracy for females (92.42%) compared to males (79.90%). This indicates potential bias in the model, which warrants further investigation and mitigation to ensure equitable predictions. Interpretability tools like LIME provided insights into the model's decision-making process, revealing that features such as education level, marital status, and capital gains played a significant role in predictions.
+
+While the model demonstrates strong predictive capabilities, there is room for improvement. Future work could focus on addressing class imbalance through advanced resampling techniques, mitigating bias by incorporating fairness-aware algorithms, and optimizing hyperparameters to enhance performance for the minority class. Additionally, feature engineering and the exploration of alternative models, such as XGBoost or neural networks, could further improve predictive accuracy and robustness.
 
 ### Future Improvements
+
 - Perform hyperparameter tuning for Logistic Regression and Random Forest.
 - Experiment with ensemble models like Gradient Boosting or LightGBM.
 - Analyze feature importance using SHAP or LIME for better interpretability.
